@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>connection page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Protagnist.</h1>
+        <div class="inputbox">
+            <input type="text" class="input-field username" placeholder="Enter a new username">
+            <input type="password" class="input-field password" placeholder="Enter a new password">
+        </div>
+        <div class="button-group">
+            <button class="button btnregister" onclick="register()">Register</button>
+        </div>
+    </div>
+    <div class="upload-avatar">
+        <h2>Avatar</h2>
+        <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+        <img id="upload-trigger" 
+             src="avatar.png" 
+             alt="Click to Upload" 
+             class="upload-button">
+        <div class="avatar-preview">
+            <img id="avatar-preview" src="#" alt="Avatar Preview" style="display: none;">
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>

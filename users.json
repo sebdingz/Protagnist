@@ -1,0 +1,8 @@
+[
+  {
+    "username": "seb",
+    "password": "123",
+    "avatarPath": "uploads/admin-avatar.png",
+    "role": "admin"
+  }
+]

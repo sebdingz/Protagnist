@@ -1,0 +1,795 @@
+body{
+    background-color:antiquewhite;
+    font-family: 'Courier', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.buttons-container {
+    display: flex;
+    justify-content: center; 
+    gap: 200px; 
+    margin-top: 40px;
+    flex-wrap: wrap; 
+}
+
+.button.active{
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    height: 60px;
+    width: 120px;
+    border-radius: 20%;
+    background: transparent;
+    background-color: #ffffffb4;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button{
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    height: 60px;
+    width: 120px;
+    border-radius: 20%;
+    background: transparent;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+.title{
+    display: flex;
+    font-size: 20px;
+    margin-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    
+}
+
+.title.protagnist{
+    text-align: center;
+    font-size: 30px;
+}
+
+.username-display{
+    font-size: 22px;
+    margin-top: 30px;
+}
+
+.searchbar{
+    margin-top: 25px;
+    border-radius: 20px;
+    border: none;
+    height: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    width: 200px;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.content.hidden{
+    display: none;
+    
+}
+
+.content:not(.hidden){
+    display: block;
+    animation: fadeIn 300ms ease; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btnSearch{
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 20px;
+    width: 60px;
+    border: none;
+    font-weight: bold;
+    background-color: white;
+    transition: all 300ms ease;
+}
+
+.btnSearch:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: all 300ms ease;
+}
+
+.btnLogout{
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 20px;
+    width: 100px;
+    border: none;
+    font-weight: bold;
+    background-color: white;
+    transition: all 300ms ease;
+    margin-left: 10px;
+}
+
+.btnLogout:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: all 300ms ease;
+}
+
+.results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.result-item {
+    position: relative;
+    width: 100%;
+    max-width: 150px;
+    margin: auto;
+    text-align: center;
+}
+
+.result-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.result-item p{
+    font-weight: bold;
+}
+
+.add-icon {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 300ms ease;
+}
+
+.add-icon:hover{
+    background-color: rgb(235, 199, 121);
+    transition: all 300ms ease;
+    color: white;
+}
+
+.context-menu {
+    position: absolute;
+    top: 0px;
+    left: 147px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+}
+
+.context-menu-item {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: none;
+    text-align: left;
+    width: 70%;
+}
+
+.context-menu-item:hover {
+    transition: all 300ms ease;
+    background-color: rgb(235, 199, 121);
+    color: white;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px 0;
+    border-radius: 5px;
+    display: none; 
+    z-index: 1100;
+}
+
+.review-editor {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.review-textarea {
+    width: 70%;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    resize: none;
+}
+
+.btnSubmit{
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    height: 60px;
+    width: 120px;
+    border-radius: 20%;
+    background: transparent;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+.btnSubmit:hover{
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    transition: all 300ms ease;
+}
+
+.review-editor {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+    color: black;
+    display: none;
+    text-align: left;
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+.review-header {
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+}
+
+.movie-poster {
+    width: 160px;
+    height: auto;
+}
+
+h3 {
+    margin: 0;
+}
+
+.review{
+    margin-top: -14px;
+    margin-left: 15px;
+}
+
+.review-textarea {
+    width: 320px;
+    max-width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    resize: none;
+    margin-top: 30px;
+    border-radius: 0%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btnClose {
+    top: 20px;
+    right: 20px;
+}
+
+.title-text{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.year-text{
+    font-size: 16px;
+}
+
+.star-rating {
+    display: flex; 
+    gap: 5px;
+    font-size: 30px; 
+    cursor:default;
+}
+
+
+.star {
+    color: #ccc;
+    transition: color 0.2s;
+}
+
+
+.star:hover {
+    color: #ffc107;
+}
+
+
+.star.selected {
+    color: #ffc107;
+}
+
+.review-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    margin-bottom: 15px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1180px;
+}
+
+.review-details {
+    flex: 1;
+    padding-right: 20px;
+    max-width: 80%; 
+    align-items: center;
+    overflow-wrap: break-word; 
+    word-wrap: break-word; 
+    white-space: normal; 
+
+}
+
+.review-details p {
+    width: 70%; 
+    margin: 5px 0;
+    line-height: 1.6; 
+}
+
+.review-details p strong {
+    font-size: 1.1em;
+    color: #333;
+}
+
+#movie-title {
+    margin: 10px 0;
+}
+#movie-title .title-text {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+#movie-title .year-text {
+    color: gray;
+    font-size: 0.9em;
+}
+
+.movie-poster {
+    flex-shrink: 0;
+    
+}
+.movie-poster img {
+    width: 140px;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+.like-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    margin-left: -65px;
+}
+
+.like-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0;
+    outline: none;
+    color: #ccc;
+    transition: color 0.2s, transform 0.1s;
+}
+
+.like-button .heart-icon {
+    font-size: 2rem;
+}
+
+.heart-icon:hover{
+    color: red;
+}
+
+.like-button.active .heart-icon {
+    color: red;
+}
+
+.like-count {
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+
+.friends-list {
+    
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 30px; 
+    margin: 0 auto;
+    padding: 20px; 
+    margin-top: 120px;
+}
+
+
+.friend-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    margin: 10px; 
+}
+
+
+.friend-avatar img {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-bottom: 10px; 
+}
+
+
+.friend-name {
+    font-size: 1rem;
+    color: #333; 
+    font-weight: bold; 
+    
+    margin-top: 12px;
+}
+
+
+
+.search-container {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+
+.searchbar1 {
+    font-family: 'Courier New', Courier, monospace;
+    height: 40px; 
+    padding: 5px 10px; 
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.btnSearch1 {
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    height: 40px; 
+    padding: 5px 15px;
+    font-size: 20px;
+    line-height: 1; 
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnSearch1:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.friend-avatar {
+    position: relative;
+    display: inline-block;
+    transition: filter 0.3s ease;
+    border-radius: 50%;
+    overflow: visible;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
+
+
+.friend-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid transparent; 
+    transition: border 0.3s ease; 
+
+}
+
+.friend-avatar.selected img {
+    border: 3px solid black;
+}
+
+
+.friend-avatar:hover img {
+    filter: brightness(70%);
+}
+
+
+.add-friend-button {
+    position: absolute;
+    top: 0px;
+    right: 0px; 
+    width: 25px;
+    height: 25px;
+    background-color: white; 
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 10;
+    color: black;
+    transition: all 300ms ease;
+}
+
+.add-friend-button:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.no-friend-msg{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.group-container {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#group-name {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+
+.btnGroup {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 15px;
+    background-color:white;
+    color: black;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btnGroup:hover {
+    color: white;
+    background-color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btnGroup .icon {
+    font-size: 16px;
+}
+
+
+.groups-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto; 
+    margin-top: 90px;
+}
+
+.group-card {
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    padding-top: 80px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 60px;
+}
+
+
+.groupName{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.group-members {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    gap: 10px;
+}
+
+.group-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: -20px;
+    object-fit: cover;
+}
+
+.group-button {
+    color: black;
+    margin-top: 30px;
+    padding: 5px 10px;
+    border: none;
+    background-color: grey;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 80px;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.group-button:hover {
+    background-color: black;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    height: 400px;
+}
+
+#groupChart {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.btnBack{
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 80px;
+    border: none;
+    font-weight: bold;
+    background-color: white;
+    transition: all 300ms ease;
+    
+}
+
+.btnBack:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: all 300ms ease;
+}
+
+.poster-item img {
+    width: 100px;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.poster-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+

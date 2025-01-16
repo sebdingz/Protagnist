@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="stylemain.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <b class="title protagnist">Protagnist.</b>
+            <span id="username-display" class="username-display"></span>
+        </div>
+        <div class="buttons-container">
+            <button class="button btnGroups" id="groups">Groups</button>
+            <button class="button btnFilms" id="films">Films</button>
+            <button class="button btnReviews" id="reviews">Reviews</button>
+            <button class="button btnFriends" id="friends">Friends</button>
+        </div>
+        <div id="groups-content" class="content hidden">
+            <div id="group-back" class="group-back" style="display: none;"></div>
+            <div id="groups-list" class="groups-list"></div>
+            <div id="chart-container" class="chart-container" style="display: none;"></div>
+        </div>
+        <div id="films-content" class="content hidden">
+            <input type="text" id="search-input" class="searchbar" placeholder="  Search ">
+            <button id="search-button" class="btnSearch">Go</button>
+            <div id="results-section" class="results"></div> 
+            <div id="review-editor" class="review-editor" style="display: none;">             
+            </div>
+            <!-- <button id="submit-review" class="btnSubmit">Submit</button>这里为了测试按钮 -->
+        </div>
+        <div id="reviews-content" class="content hidden">
+
+        </div>
+        <div id="friends-content" class="content hidden">
+            <!-- 添加搜索框和按钮 -->
+            <div class="search-container">
+                <input type="text" id="search-user" placeholder="Username..." class="searchbar1">
+                <button id="search-user-button" class="btnSearch1">Go</button>
+                <button id="show-friends-button" class="btnSearch1">Back</button>
+            </div>
+            <!-- 搜索结果和好友列表的显示区域 -->
+            <div id="friends-results" class="friends-list">
+                <!-- 搜索结果或者好友列表会在这里显示 -->
+            </div>
+            <div id="group-container" class="group-container">
+                <input type="text" id="group-name" placeholder="Create a group name...">
+                <button id="group-button" class="btnGroup">
+                    <span class="icon">➕</span> Create Group
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>

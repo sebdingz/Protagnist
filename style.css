@@ -1,0 +1,150 @@
+
+
+body{
+    background-color:antiquewhite;
+    font-family: 'Courier', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    text-align: center;
+    padding: 120px;
+    font-size: 25px;
+}
+
+input{
+    padding-left: 20px;
+}
+
+.inputbox {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column; 
+    gap: 30px; 
+    border-radius: 50%;
+}
+
+.input-field{
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 40px;
+    height: 70px;
+    border: none;
+    background-color:rgba(251, 249, 245, 0.632);
+    font-size: 20px;
+}
+
+.button-group{
+    margin-top: 60px;
+}
+
+.btnsignup{
+    height: 50px;
+    width:120px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:bold;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(229, 229, 229);
+    margin-right: 40px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.btnregister{
+    height: 50px;
+    width:120px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:bold;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(229, 229, 229);
+    margin-right: 40px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.btnlogin{
+    height: 50px;
+    width:120px;
+    font-family: 'Courier New', Courier,monospace;
+    font-weight:bold;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(229, 229, 229);
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+.btnsignup:hover{
+    background-color:rgb(191, 191, 192);
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.btnlogin:hover{
+    background-color:rgb(191, 191, 192);
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.btnconfirm:hover{
+    background-color:rgb(191, 191, 192);
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.btnconfirm:active{
+    background-color:rgb(97, 97, 97);
+}
+
+.btnsignup:active{
+    background-color:rgb(97, 97, 97);
+}
+
+.btnlogin:active{
+    background-color:rgb(97, 97, 97);
+}
+
+.logo{
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.upload-avatar {
+    text-align: center;
+    max-width: 200px;
+}
+
+.upload-avatar h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.upload-button {
+    cursor: pointer;
+    width: 90px; 
+    height: 90px; 
+    margin: 10px auto;
+    margin-top: 40px;
+    display: block;
+    border-radius: 50%; 
+    object-fit: cover; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.upload-button:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.avatar-preview img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
