@@ -1,3 +1,101 @@
 [
-
+  {
+    "groupName": "friday night",
+    "members": [
+      {
+        "username": "user2",
+        "avatarPath": "uploads\\8946eee7bae6bc91315b7345f69e8edb"
+      },
+      {
+        "username": "user3",
+        "avatarPath": "uploads\\ef08eee18f2eddb21134e215bbd9526f"
+      },
+      {
+        "username": "user1",
+        "password": "123",
+        "avatarPath": "uploads\\19dc0e81cb566995a7536ebed4750bc4",
+        "friends": [
+          "user2",
+          "user3",
+          "user4"
+        ]
+      }
+    ],
+    "movies": [
+      {
+        "title": "F1 The Movie",
+        "posterPath": "https://image.tmdb.org/t/p/w500/9PXZIUsSDh4alB80jheWX4fhZmy.jpg",
+        "addedBy": "user1"
+      },
+      {
+        "title": "Top Gun: Maverick",
+        "posterPath": "https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg",
+        "addedBy": "user1"
+      },
+      {
+        "title": "Inception",
+        "posterPath": "https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
+        "addedBy": "user1"
+      },
+      {
+        "title": "Interstellar",
+        "posterPath": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+        "addedBy": "user1"
+      },
+      {
+        "title": "F1 The Movie",
+        "posterPath": "https://image.tmdb.org/t/p/w500/9PXZIUsSDh4alB80jheWX4fhZmy.jpg",
+        "addedBy": "user2"
+      },
+      {
+        "title": "Top Gun: Maverick",
+        "posterPath": "https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg",
+        "addedBy": "user2"
+      }
+    ]
+  },
+  {
+    "groupName": "sunday night",
+    "members": [
+      {
+        "username": "user2",
+        "avatarPath": "uploads\\8946eee7bae6bc91315b7345f69e8edb"
+      },
+      {
+        "username": "user3",
+        "avatarPath": "uploads\\ef08eee18f2eddb21134e215bbd9526f"
+      },
+      {
+        "username": "user4",
+        "avatarPath": "uploads\\b80a6b4290a443ec5a20739c96e9881e"
+      },
+      {
+        "username": "user1",
+        "password": "123",
+        "avatarPath": "uploads\\19dc0e81cb566995a7536ebed4750bc4",
+        "friends": [
+          "user2",
+          "user3",
+          "user4"
+        ]
+      }
+    ],
+    "movies": [
+      {
+        "title": "The Dark Knight Rises",
+        "posterPath": "https://image.tmdb.org/t/p/w500/hr0L2aueqlP2BYUblTTjmtn0hw4.jpg",
+        "addedBy": "user1"
+      },
+      {
+        "title": "Interstellar",
+        "posterPath": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+        "addedBy": "user2"
+      },
+      {
+        "title": "Superman",
+        "posterPath": "https://image.tmdb.org/t/p/w500/ombsmhYUqR4qqOLOxAyr5V8hbyv.jpg",
+        "addedBy": "user2"
+      }
+    ]
+  }
 ]

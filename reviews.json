@@ -1,3 +1,50 @@
 {
-
+  "user2": [
+    {
+      "movieTitle": "Top Gun: Maverick",
+      "year": "2022",
+      "reviewText": "WOW!!!!!!",
+      "rating": 5,
+      "posterPath": "/62HCnUTziyWcpDaBO2i1DX17ljH.jpg"
+    },
+    {
+      "movieTitle": "Superman",
+      "year": "2025",
+      "reviewText": "So gooddddddd",
+      "rating": 5,
+      "posterPath": "/ombsmhYUqR4qqOLOxAyr5V8hbyv.jpg"
+    }
+  ],
+  "user3": [
+    {
+      "movieTitle": "Bullet Train",
+      "year": "2022",
+      "reviewText": "I love brad!!",
+      "rating": 5,
+      "posterPath": "/zTgMFlHG5D1EqdQDhfOTAsyzGoX.jpg"
+    }
+  ],
+  "user1": [
+    {
+      "movieTitle": "The Dark Knight Rises",
+      "year": "2012",
+      "reviewText": "Loved it.",
+      "rating": 5,
+      "posterPath": "/hr0L2aueqlP2BYUblTTjmtn0hw4.jpg"
+    },
+    {
+      "movieTitle": "The Dark Knight",
+      "year": "2008",
+      "reviewText": "WOW!!!",
+      "rating": 5,
+      "posterPath": "/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+    },
+    {
+      "movieTitle": "F1 The Movie",
+      "year": "2025",
+      "reviewText": "So good!!!",
+      "rating": 5,
+      "posterPath": "/9PXZIUsSDh4alB80jheWX4fhZmy.jpg"
+    }
+  ]
 }

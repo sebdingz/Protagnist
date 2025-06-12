@@ -1,8 +1,38 @@
 [
   {
-    "username": "seb",
+    "username": "user1",
     "password": "123",
-    "avatarPath": "uploads/admin-avatar.png",
-    "role": "admin"
+    "avatarPath": "uploads\\19dc0e81cb566995a7536ebed4750bc4",
+    "friends": [
+      "user2",
+      "user3",
+      "user4"
+    ]
+  },
+  {
+    "username": "user2",
+    "password": "123",
+    "avatarPath": "uploads\\8946eee7bae6bc91315b7345f69e8edb",
+    "friends": [
+      "user1",
+      "user3"
+    ]
+  },
+  {
+    "username": "user3",
+    "password": "123",
+    "avatarPath": "uploads\\ef08eee18f2eddb21134e215bbd9526f",
+    "friends": [
+      "user1",
+      "user2"
+    ]
+  },
+  {
+    "username": "user4",
+    "password": "123",
+    "avatarPath": "uploads\\b80a6b4290a443ec5a20739c96e9881e",
+    "friends": [
+      "user1"
+    ]
   }
 ]
